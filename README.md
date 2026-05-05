@@ -1,4 +1,4 @@
-# 🤖 Customer Transaction RPA Bot
+# Customer Transaction RPA Bot
 
 A Python-based Robotic Process Automation (RPA) pipeline that processes customer transaction data from Excel files, identifies top customers by total transaction value, and automatically emails the report.
 
