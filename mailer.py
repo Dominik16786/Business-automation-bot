@@ -5,9 +5,9 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-EMAIL_ADDRESS  = "testing_email_aut@wp.pl"
-EMAIL_PASSWORD = "Very_strong_password123"
-RECEIVER_EMAIL = "qkg65870@laoia.com"
+EMAIL_ADDRESS  = ""
+EMAIL_PASSWORD = ""
+RECEIVER_EMAIL = ""
 SMTP_HOST = "smtp.wp.pl" 
 SMTP_PORT = 587
 
