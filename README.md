@@ -2,8 +2,6 @@
 
 A Python-based Robotic Process Automation (RPA) pipeline that processes customer transaction data from Excel files, identifies top customers by total transaction value, and automatically emails the report.
 
-> ⚠️ **This is an ongoing project.** See the [Roadmap](#-roadmap--planned-features) section for planned features and known limitations.
-
 ---
 
 ## 📁 Project Structure
@@ -142,42 +140,5 @@ This project is under active development. The following features are planned for
 
 - [ ] **Single-command runner** — one script (`run.py` or `main.py`) that executes the full pipeline end-to-end: generate → process → email, with no manual steps
 - [ ] **File upload mode** — drop your own `transactions.xlsx` and `companies.xlsx` into a folder (or a simple web UI) and the bot picks them up and processes them automatically, with no code changes needed
-
-### 🔧 Nice to have
-
-- [ ] Configurable Top N (currently hardcoded to 10)
-- [ ] Support for `.csv` input files in addition to `.xlsx`
-- [ ] HTML email body with an inline summary table
-- [ ] Date range filtering (e.g. process only last 30 days of transactions)
-- [ ] Logging to a `.log` file instead of just console output
-- [ ] Config file (`config.ini` or `.env`) so credentials are not hardcoded in `mailer.py`
-
----
-
-## 🧩 Dependencies
-
-| Package | Purpose |
-|---|---|
-| `pandas` | Data loading, cleaning, aggregation |
-| `openpyxl` | Excel file reading and formatted output |
-| `smtplib` | Email sending (standard library, no install needed) |
-
-Install all at once:
-
-```bash
-pip install pandas openpyxl
-```
-
----
-
-## ⚠️ Known Limitations
-
-- Email credentials are currently stored as plain text in `mailer.py` — use a `.env` file or environment variables in production
-- The bot does not deduplicate transactions (same NIP + same date + same price is treated as a separate transaction)
-- Only `.xlsx` format is supported as input (not `.csv` or `.xls`)
-
----
-
-## 👤 Author
 
 Built as a portfolio RPA project demonstrating a realistic business automation pipeline using Python and pandas.
